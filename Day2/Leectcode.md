@@ -53,3 +53,41 @@ class Solution {
 ```
 
 # 234.回文链表
+
+ListNode自定义的单链表结构，以next指向下一个节点
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        List<Integer> vals = new ArrayList<Integer>();
+
+        // 将链表的值复制到数组中
+        ListNode currentNode = head;
+        while (currentNode != null) {
+            vals.add(currentNode.val);
+            currentNode = currentNode.next;
+        }
+        int i = 0;
+        int j = vals.size() - 1;
+        while(i < j){
+            if(!vals.get(i).equals(vals.get(j))){
+                return false;
+            }
+            i++;
+            j--;
+        }
+         return true;
+    }
+}
+```
+
