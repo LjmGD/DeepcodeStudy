@@ -187,6 +187,6 @@ data中可以写复杂类型的数据
 </html>
 ```
 
-效果图，可以直接修改
+效果图
 
 ![image-20220121214203199](C:/Users/Ljm/AppData/Roaming/Typora/typora-user-images/image-20220121214203199.png)
